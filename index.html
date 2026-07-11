@@ -199,6 +199,29 @@
     .typewrite{ font-size: 18px; }
     .env-grid{ grid-template-columns: 1fr; gap: 2px 0; }
     .env-grid dt{ margin-top: 10px; }
+
+    /* stack the units table into cards instead of squeezing 3 columns */
+    table.units thead{ display:none; }
+    table.units, table.units tbody, table.units tr, table.units td{
+      display:block;
+      width:100%;
+    }
+    table.units tr{
+      border-bottom: 1px dashed var(--rule);
+      padding: 14px 0;
+    }
+    table.units tr:last-child{ border-bottom:none; }
+    table.units td{
+      padding: 2px 0;
+      border-bottom:none;
+    }
+    table.units td.unit-name{ font-size:15px; }
+    table.units td.unit-desc{ margin: 2px 0 6px; }
+  }
+
+  @media (max-width: 360px){
+    .sheet{ padding: 0 20px; }
+    .status-line{ font-size: 15px; }
   }
 
   @media (prefers-reduced-motion: reduce){
